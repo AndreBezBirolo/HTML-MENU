@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Novo</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+header {
+    height: 100px;
+    background-color: rgb(137, 146, 143);
+}
+#selecionar_menu {
+    display: none;
+}
+#icone {
+    z-index: 1;
+    position: relative;
+}
+#icone img {
+    padding: 35px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+}
+#logo {
+    position: absolute;
+    right: 680px;
+    top: 10px;
+}
+.redes_sociais {
+    top: 0;
+    right: 35px;
+    position: absolute;
+    list-style: none;
+}
+.redes_sociais li {
+    display: inline-block;
+    padding: 35px 15px 15px 15px;
+}
+.menu_itens {
+    width: 100%;
+    background-color: rgb(116, 122, 120);
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    visibility: hidden;
+    transition: all .2s linear;
+}
+.menu_itens ul {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    padding: 40px;
+}
+.menu_itens ul li {
+    text-align: center;
+    display: inline-block;
+}
+.menu_itens ul li:nth-child(2) {
+    margin: 0 30px;
+}
+.menu_itens ul li:nth-child(3) {
+    margin: 0 30px 0 0;
+}
+.menu_itens ul li a {
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+}
+.menu_itens ul li a:hover {
+    border-bottom: 1px solid #ccc;
+}
+#selecionar_menu:checked ~ .menu_itens {
+    visibility: visible;
+    transform: translateY(100px);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="selecionar_menu">
+            <label for="selecionar_menu" id="icone">
+                <img src="hamburguer.png" width="30px" height="30px">
+            </label>
+
+            <a>
+                <img id="logo" src="logo.png" width="200px" height="70px">
+            </a>
+
+            <ul class="redes_sociais">
+                <li>
+                    <a href="">
+                        <img src="facebook.png" width="32px" height="32px">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="twitter.png" width="32px" height="32px">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="instagram.png" width="32px" height="32px">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="menu_itens">
+                <ul>
+                    <li>
+                        <a href="">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Contato
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Portfólio
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+</body>
+</html>
